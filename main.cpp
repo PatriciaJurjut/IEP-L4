@@ -2,6 +2,7 @@
 #include "Fruit.hpp"
 
 int main() {
+    
     Fruit wm = Fruit("watermelon", "green.. or red?", 1505.20);
     Fruit apple = Fruit("apple", "red", 105.24);
     Fruit orange = Fruit("orange", "definitely not orange", 108.9);
@@ -17,6 +18,10 @@ int main() {
     unidetifiedFruit.showDetails();
     wm.showDetails(); 
 
+    //item 11...
+    std::cout << std::endl << "Item 11: " << std::endl;
+    wm = wm;
+    
     
     return 0;
 }

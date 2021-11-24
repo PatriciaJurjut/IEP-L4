@@ -5,10 +5,18 @@ Fruit::Fruit(const std::string name, const std::string color, double weight) {
     this->name = name;
     this->color = color;
     this->weight = weight;
+    
 }
 
 Fruit& Fruit::operator=(const Fruit &source){ 
     std::cout << std::endl << "Overloaded assignment operator has been called ~~" << std::endl;
+
+    //Item 11: check for self
+    if(this == &source) {
+        std::cout << std::endl << "ASSIGNMENT TO SELF!" << std::endl;
+        return *this;
+    }
+
     this->name = "Another name!!";
     this->color = source.color;
     this->weight = source.weight;
