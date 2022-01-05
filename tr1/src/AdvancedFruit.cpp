@@ -2,16 +2,11 @@
 #include "AdvancedFruit.hpp"
 #include "Fruit.hpp"
 
-// AdvancedFruit::AdvancedFruit(const std::string name, const std::string color, 
-//                              double weight, int numberOfSeeds) {
-//     this->numberOfSeeds = numberOfSeeds;
-// }
-
 AdvancedFruit::~AdvancedFruit() {}
 
-// AdvancedFruit::AdvancedFruit(const AdvancedFruit &frt) {
-//     std::cout << "Copy constructor called!" << std::endl;
-// }
+AdvancedFruit::AdvancedFruit(const AdvancedFruit &frt) {
+    std::cout << "Copy constructor called!" << std::endl;
+}
 
 AdvancedFruit& AdvancedFruit::operator=(const AdvancedFruit &source){ 
     std::cout << std::endl << "Overloaded assignment operator has been called ~~" << std::endl;
