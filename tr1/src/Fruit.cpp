@@ -8,6 +8,12 @@ Fruit::Fruit(const std::string name, const std::string color, double weight) {
     
 }
 
+Fruit::~Fruit() {}
+
+Fruit::Fruit(const Fruit &frt) {
+    std::cout << "Copy constructor called!" << std::endl;
+}
+
 Fruit& Fruit::operator=(const Fruit &source){ 
     std::cout << std::endl << "Overloaded assignment operator has been called ~~" << std::endl;
 
@@ -17,11 +23,12 @@ Fruit& Fruit::operator=(const Fruit &source){
         return *this;
     }
 
-    this->name = "Another name!!";
+    this->name = source.name;
     this->color = source.color;
     this->weight = source.weight;
     return *this;
 }
+
 void Fruit::showDetails() {
     std::cout << "Fruit name: " << name << std::endl;
     std::cout << "Color: " << color << std::endl;
